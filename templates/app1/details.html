@@ -1,0 +1,25 @@
+{%extends "app1/home.html"%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details Page</title>
+</head>
+<body>
+    {%block body_block%}
+
+
+    <h2 style="padding: 30px;">DETAILS</h2>
+
+    <p>{{ e.details }}</p>
+    <div style="padding: 150px;">
+    <a href="/download"><button style="width: 100px; height: 40px; background-color: rgba(33, 33, 115, 0.558);">download</button></a>
+    <a href="/update/{{i.id}}"><button style="background-color: rgba(33, 33, 115, 0.558);">Update</button></a>
+    <a href="/delete/{{i.id}}"><button style="background-color: rgba(33, 33, 115, 0.558);">Delete</button></a>
+
+    </div>
+    {%endblock%}
+
+</body>
+</html>

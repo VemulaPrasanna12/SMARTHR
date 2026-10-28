@@ -1,0 +1,16 @@
+{%extends "app1/home.html"%}
+{%block body_block%}
+<form method="POST" action="{% url 'add_details' %}">
+    {% csrf_token %}
+
+    <h3 style="padding: 30px; color: rgb(33, 33, 81);">ADD NEWS</h3>
+
+    <textarea name="details" required
+        style="width: 500px; height: 260px;">
+    </textarea>
+
+    <br><br>
+
+    <button type="submit" style="width: 100px; height: 40px; background-color: rgba(38, 38, 95, 0.529);">SUBMIT</button>
+</form>
+ {%endblock%}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <table border="2px;">
+            <thead>
+                <th>role</th>
+                <th>exp </th>
+                <th>skills</th>
+                <th>ctc</th>
+                <th>notice</th>
+                
+            
+                
+
+                <th>ACTION</th>
+            </thead>
+            <tbody>
+                {%for i in e%}
+                <tr>
+                    <td>{{i.role | title}}</td>
+                    <td>{{i.exp | title}}</td>
+                    <td>{{i.skills | title}}</td>
+                    <td>{{i.ctc}}</td>
+                    <td>{{i.notice}}</td>
+                    
+                    
+                    
+                    
+                    <td>
+                        <a href="/update/{{i.id}}"><button style="background-color: rgba(33, 33, 115, 0.558);">Update</button></a>
+                        <a href="/delete/{{i.id}}"><button style="background-color: rgba(33, 33, 115, 0.558);">Delete</button></a>
+                    </td>
+                </tr>
+                {%endfor%}
+            
+            </tbody>
+        </table>
+</body>
+</html>

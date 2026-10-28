@@ -1,0 +1,25 @@
+{%extends "app1/home.html"%}
+
+
+
+<center>
+    {%block body_block%}
+
+
+
+    <h2 style="color: rgba(28, 23, 97, 0.973); padding: 20px;">EMPLOYEE FORM</h2>
+    <form method="post">
+        {%csrf_token%}
+        emp_name <input type="text" name="emp_name" value=""><br><br>
+        emp_id <input type="text" name="emp_id" value=""><br><br>
+        designation<input type="text" name="designation" value=""><br><br>
+        joining_date <input type="text" name="joining_date" value="" placeholder=""><br><br>
+        department <input type="text" name="department" value="" placeholder=""><br><br>
+        annual_ctc <input type="text" name="annual_ctc" value=""><br><br>
+        experience <input type="text" name="experience" value=""><br><br>
+    <button style="width: 100px;height: 30px; background-color: rgba(17, 17, 79, 0.521);">SUBMIT</button>
+
+    </form>
+
+</center>
+{%endblock%}

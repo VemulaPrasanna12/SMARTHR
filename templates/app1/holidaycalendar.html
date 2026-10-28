@@ -1,0 +1,51 @@
+{%extends "app1/home.html"%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Holidays Calendar</title>
+</head>
+{%block body_block%}
+
+<body style="font-family: Arial; background-color: white;">
+
+    <h3 style="text-align: center; padding: 20px; color: #1d2767;">HOLIDAYS CALENDAR</h3>
+
+    <table align="center" width="70%" cellpadding="12" style="border-collapse: collapse;">
+
+        <tr style="background-color: #1d2767; color: white;">
+            <th align="left">DATE</th>
+            <th align="left">DETAILS</th>
+        </tr>
+
+        {% for item in holidays %}
+        <tr style="background-color: #fbe0d28a;">
+            <td style="border: 1px solid white;">
+                {{ item.date|date:"d-m-Y" }}
+            </td>
+            <td style="border: 1px solid white;">{{ item.occasion }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2" align="center">No holidays added yet.</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    <center>
+        <a href="news">
+            <button type="button" style="width: 150px; height: 50px; background-color: #1d2767b7;">LATEST NEWS</button>
+        </a>
+    </center>
+    
+    {%endblock%}
+
+
+</body>
+
+</html>

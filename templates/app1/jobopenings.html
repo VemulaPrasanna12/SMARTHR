@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Openings</title>
+</head>
+<body>
+
+    <h3 align="center">JOB OPENINGS</h3>
+
+    <form method="POST" action="/jobopenings">
+        {% csrf_token %}
+
+        <table align="center" cellpadding="5">
+            <tr>
+                <td><label for="role"><b>role</b></label></td>
+                <td>
+                    <input type="text" id="role"
+                           name="role" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="exp"><b>exp</b></label></td>
+                <td>
+                    <input type="text" id="exp"
+                           name="exp" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="skills"><b>skills</b></label></td>
+                <td>
+                    <input type="text" id="skills"
+                           name="skills" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="ctc"><b>ctc</b></label></td>
+                <td>
+                    <input type="text" id="ctc"
+                           name="ctc" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="notice"><b>notice</b></label></td>
+                <td>
+                    <input type="text" id="notice"
+                           name="notice" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <br>
+                    <button type="submit">SUBMIT</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

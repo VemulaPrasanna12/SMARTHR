@@ -1,0 +1,16 @@
+{% extends "uapp/home.html" %}
+
+{%block body_block%}
+
+<center>
+    <h2>LOGIN HERE</h2>
+    <form method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Login</button>
+
+    </form>
+    <a href="/register"><h3>Create New Accounts here</h3></a>
+    
+</center>
+{%endblock%}

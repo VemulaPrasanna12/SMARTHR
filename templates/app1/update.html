@@ -1,0 +1,26 @@
+{%extends "app1/home.html"%}
+
+
+<center>
+    {%block body_block%}
+    <h2 style="color: rgb(22, 22, 50);">Update Form</h2>
+    <form method="post">
+
+        {%csrf_token%}
+
+        emp_name<input type="text" name="emp_name" value="{{e.emp_name}}"><br><br>
+        emp_id<input type="text" name="emp_id" value="{{e.emp_id}}"><br><br>
+        designation<input type="text" name="designation" value="{{e.designation}}"><br><br>
+        joining_date<input type="text" name="joining_date" value="{{e.joining_date}}"><br><br>
+        department<input type="text" name="department" value="{{e.department}}"><br><br>
+        annual_ctc<input type="text" name="annual_ctc" value="{{e.annual_ctc}}"><br><br>
+        experience<input type="text" name="experience" value="{{e.experience}}"><br><br>
+
+    <button style="width: 100px;height: 30px; background-color: rgba(17, 17, 79, 0.521);">Update</button>
+
+
+
+
+    </form>
+</center>
+{%endblock%}

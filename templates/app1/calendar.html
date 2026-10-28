@@ -1,0 +1,50 @@
+{%extends "app1/home.html"%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+</head>
+
+<body style="font-family: Arial; background-color: white;">
+    {%block body_block%}
+
+    <h3 style="text-align: center; padding: 20px; color: #1d4876;">CALENDAR</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <table align="center" cellpadding="15">
+            <tr>
+                <td><b>DATE</b></td>
+                <td>
+                    <input type="date" name="date" required
+                           style="width: 330px; padding: 12px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Occasion</b></td>
+                <td>
+                    <textarea name="occasion" required
+                              style="width: 330px; height: 180px;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit"
+                            style="background-color: #3675b9;
+                                   color: white; padding: 12px 35px;
+                                   border: none; cursor: pointer;">
+                        SUBMIT
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+     {%endblock%}
+
+</body>
+</html>

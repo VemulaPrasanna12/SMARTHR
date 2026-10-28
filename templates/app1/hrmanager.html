@@ -1,0 +1,40 @@
+
+{%extends "app1/home.html"%}
+
+{%block body_block%}
+<center>
+<h1 class="text-center mt-5">
+    HR MANAGER REQUIRED LOGIN TO ENTER HIS SECTION
+</h1>
+<form  action="/emp/" method="POST">
+    {% csrf_token %}
+
+    <table align="center" cellpadding="10"  border: 1px solid #0e157972;>
+        <tr>
+            <td><b>USER NAME</b></td>
+            <td>
+                <input type="text" name="username"
+                       class="form-control" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>PASSWORD</b></td>
+            <td>
+                <input type="password" name="password"
+                       class="form-control" required>
+            </td>
+        </tr>
+
+        <!-- <tr> -->
+            <td></td>
+            <td align="right">
+                <button type="submit" class="btn btn-warning">
+                    LOGIN
+                </button>
+            </td>
+        </tr>
+    </table>
+</form>
+ {%endblock%}
+ </center>
